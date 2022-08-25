@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Varela+Round&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #080625;
+}
+
+.logo h2 {
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+}
+
+header {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lists {
+
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    margin-right: 30px;
+}
+
+.list a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+
+.signup {
+    margin-right: 30px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #080625;
+}
+
+.login {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #080625;
+    border: 1px solid #fff;
+}
+
+.signup a {
+    text-decoration: none;
+    color: #080625;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+
+}
+
+.login a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+
+.bottom {
+    border: 0.5px solid #3c3b3d;
+}
+
+.earth {
+    width: 400px;
+    height: 400px;
+}
+
+.earth>img {
+    width: 100%;
+    height: 100%;
+}
+
+.section1 {
+    width: 70%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section1-text {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section1-text h2 {
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.section1-text p {
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.wikipedia {
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.source {
+    color: rgb(221, 218, 218);
+    text-decoration: none;
+}
+
+.arrow {
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    background-color: #080625;
+    color: #fff;
+    font-weight: 600;
+    ;
+    border: 1px solid rgb(221, 218, 218);
+}
+
+.buttons button:hover {
+    background-color: rgb(114, 16, 189);
+
+}
+
+.buttons buutton span {
+    margin-right: 15px;
+}
+
+.section2 {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.props {
+    width: 20%;
+    border: 1px solid rgb(221, 218, 218);
+    padding: 20px;
+    color: white;
+}
+
+.props p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.props h3 {
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+}
