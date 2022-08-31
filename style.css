@@ -12,11 +12,16 @@
     min-height: 100vh;
     background-color: #080625;
 }
-
+.container.active{
+    background-color: white;
+}
 .logo h2 {
     color: #fff;
     font-family: 'Bebas Neue', cursive;
     font-size: 24px;
+}
+.logo h2.active{
+    color: black;
 }
 
 header {
@@ -33,7 +38,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+nav{
+    display: none;
+}
 .lists {
 
     list-style: none;
@@ -51,6 +58,9 @@ header {
     text-decoration: none;
     font-family: 'Varela Round', sans-serif;
     font-size: 14px;
+}
+.list a.active{
+    color: #080625;
 }
 
 .signup {
@@ -86,6 +96,47 @@ header {
 .bottom {
     border: 0.5px solid #3c3b3d;
 }
+ #toggle{
+    margin-left: 30px;
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    border-radius: 160px;
+    background-color: #222;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                inset 0 8px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(0,0,0,0.1);
+ }
+ #toggle.active{
+    background: white;
+    box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
+                inset 0 2px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 8px rgba(0,0,0,0.05);
+ }
+ #toggle .indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+                inset  0 4px 4px rgba(255,255,255,0.2),
+                inset 0 -4px 4px rgba(255,255,255,0.2);
+    transform: 0.5s;            
+ }
+  #toggle.active .indicator{
+    left: 20px;
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+                inset  0 4px 4px rgba(255,255,255,0.2),
+                inset 0 -4px 4px rgba(255,255,255,0.2);
+ }
 
 .earth {
     width: 400px;
@@ -117,7 +168,9 @@ header {
     font-size: 48px;
     margin-bottom: 15px;
 }
-
+.section1-text h2.active,.section1-text p.active, .wikipedia.active{
+    color: #080625;
+}
 .section1-text p {
     color: #fff;
     font-family: 'Varela Round', sans-serif;
@@ -181,7 +234,9 @@ header {
     padding: 20px;
     color: white;
 }
-
+.props.active{
+    color: #080625;
+}
 .props p {
     font-size: 14px;
     margin-bottom: 10px;
@@ -191,42 +246,4 @@ header {
 .props h3 {
     font-size: 36px;
     font-family: 'Bebas Neue', cursive;
-}
-.create{
-    width: 100%;
-    height: 100vh;
-}
-.inner-create{
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
-}
-.inner-create h3{
-text-align: center;
-font-size: 24px;
-margin: 20px 0;
-}
-form{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.inputs{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
-.inputs input{
-    margin-top: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid grey;
-}
-.inner-create p{
-    text-align: center;
 }

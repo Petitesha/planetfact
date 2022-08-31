@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./auth.css" />
     <title>Sign Up</title>
 </head>
 <body>
     <div class="create">
         <div class="inner-create">
             <h3>Create Account</h3>
-            <form>
+            <form class="form">
                 <div class="inputs">
-                    <label>Name</label>
-                    <input type="text" placeholder="Enter your Name" />
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter your Name" class="name" id="name" />
+                    <p class="errormsg">Error Message</p>
                 </div>
                <div class="inputs">
-                    <label>Email Address</label>
-                    <input type='text' placeholder="Enter your Email Address" />
+                    <label for="email">Email Address</label>
+                    <input type='email' placeholder="Enter your Email Address" class="email"  id="email"  />
+                    <p class="errormsg">Error Message</p>
                </div>
                <div class="inputs">
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter your password" />
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" class="password" minlength="8"  id="password"  />
+                    <p class="errormsg">Error Message</p>
                </div>
                <div class="inputs">
-                    <label>Confirm Password</label>
-                    <input type="password" placeholder="confirm your password"/>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" placeholder="confirm your password" class="confirmPassword" minlength="8"  id="confirmPassword"  />
+                    <p class="errormsg">Error Message</p>
                </div>
+               <button >Submit</button>
             </form>
-            <p>Already have an Account? <a href="./login.html">Login Here </a></p>
+            <p class="account">Already have an Account? <a href="./login.html">Login Here </a></p>
         </div>
     </div>
 </body>
+<script src="./script.js"></script>
 </html>
