@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,43 @@
     <link rel="stylesheet" href="./auth.css" />
     <title>Sign Up</title>
 </head>
+
 <body>
     <div class="create">
         <div class="inner-create">
             <h3>Create Account</h3>
             <form class="form">
                 <div class="inputs">
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Enter your Name" class="name" id="name" />
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your Name" class="name input" id="name" value=""
+                        name="fullName" onchange="handleChange(event)" required />
                     <p class="errormsg">Error Message</p>
                 </div>
-               <div class="inputs">
-                    <label for="email">Email Address</label>
-                    <input type='email' placeholder="Enter your Email Address" class="email"  id="email"  />
+                <div class="inputs">
+                    <label>Email Address</label>
+                    <input type='email' placeholder="Enter your Email Address" class="email input" id="email"
+                        name="email" onchange="handleChange(event)" required />
                     <p class="errormsg">Error Message</p>
-               </div>
-               <div class="inputs">
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Enter your password" class="password" minlength="8"  id="password"  />
+                </div>
+                <div class="inputs">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" class="password input" minlength="8"
+                        name="password" id="password" onchange="handleChange(event)" required />
                     <p class="errormsg">Error Message</p>
-               </div>
-               <div class="inputs">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" placeholder="confirm your password" class="confirmPassword" minlength="8"  id="confirmPassword"  />
+                </div>
+                <div class="inputs">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="confirm your password" class="confirmPassword input"
+                        minlength="8" name="confirmPassword" id="confirmPassword" onchange="handleChange(event)"
+                        required />
                     <p class="errormsg">Error Message</p>
-               </div>
-               <button >Submit</button>
+                </div>
+                <button type="'submit">Submit</button>
             </form>
             <p class="account">Already have an Account? <a href="./login.html">Login Here </a></p>
         </div>
     </div>
 </body>
 <script src="./script.js"></script>
+
 </html>
