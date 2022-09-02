@@ -1,5 +1,6 @@
-const toggle = () => {
-  const toggle = document.getElementById('toggle');
+const toggle = (evt, id) => {
+  console.log(id)
+  const toggle = document.getElementById(id);
   const container = document.querySelector('.container');
   const logo = document.querySelector('.logo h2');
   const listA = document.querySelectorAll('.list a');
@@ -7,6 +8,8 @@ const toggle = () => {
   const section1p = document.querySelector('.section1-text p');
   const wikipedia = document.querySelector('.wikipedia');
   const props = document.querySelectorAll('.props');
+  const lists = document.querySelectorAll('.list-side a');
+  const sidebar = document.querySelector('.sidebar');
   const indicator = document.getElementsByClassName('indicator');
   toggle.classList.toggle('active');
   container.classList.toggle('active');
@@ -14,11 +17,17 @@ const toggle = () => {
   section1h2.classList.toggle('active');
   section1p.classList.toggle('active');
   wikipedia.classList.toggle('active');
+  sidebar.classList.toggle('active');
+
   for (let i = 0; i < listA.length; i++) {
     listA[i].classList.toggle('active');
   }
+
   for (let i = 0; i < props.length; i++) {
     props[i].classList.toggle('active');
+  }
+  for (let i = 0; i < lists.length; i++) {
+    lists[i].classList.toggle('active');
   }
 };
 
@@ -27,14 +36,17 @@ let user = {};
 const signup = (event) => {
   event.preventDefault();
   const confirmPassword = document.querySelector('.confirmPassword');
+
   if (user.password !== user.confirmPassword) {
     showError(confirmPassword, "Passwords don't match");
     return;
   } else {
     showSuccess(confirmPassword);
   }
+
   const registeredUsers = JSON.parse(localStorage.getItem('users'));
   console.log(registeredUsers);
+
   if (!registeredUsers) {
     const array = [];
     array.push(user);
@@ -43,14 +55,20 @@ const signup = (event) => {
     const isExisting = registeredUsers.find(
       (item) => item.email === user.email
     );
+
     if (isExisting) {
-      alert(`User ${user.email} already exists`);
+      alert(`User $ {
+          user.email
+        }
+
+        already exists`);
     } else {
       registeredUsers.push(user);
       localStorage.setItem('users', JSON.stringify(registeredUsers));
       const inputs = document.querySelectorAll('.input');
       console.log(inputs);
       inputs.forEach((item) => (item.value = ''));
+
       user = {};
     }
   }
@@ -87,10 +105,16 @@ const login = (event) => {
   const registeredUsers = JSON.parse(localStorage.getItem('users'));
   console.log(registeredUsers);
   const isExisting = registeredUsers.find((item) => item.email === user.email);
+
   if (!isExisting) {
-    alert(`User ${user.email} doesnt exists`);
+    alert(`User $ {
+        user.email
+      }
+
+      doesnt exists`);
     return;
   }
+
   if (isExisting.password !== user.password) {
     alert('wrong password');
     return;
@@ -105,10 +129,12 @@ const changeNav = () => {
   const auth = document.querySelector('.auth');
   const isAuth = localStorage.getItem('isAuthenticated') === 'true';
   console.log(isAuth);
+
   if (isAuth) {
     auth.style.display = 'none';
     nav.style.display = 'block';
   }
+
   // console.log(nav);
   // console.log(auth);
   // nav.classList.toggle('active');
@@ -117,24 +143,25 @@ const changeNav = () => {
 
 changeNav();
 
-
 const hamburger = document.querySelector('.hamburger img');
-const close = document.querySelector('.hamburger p');
+const closeBtn = document.querySelector('.hamburger p');
 const sidebar = document.querySelector('.sidebar');
-
-
+console.log(close);
 
 let isMenuOpen = false;
-const openSideBar = () => {
-    isMenuOpen = !isMenuOpen;
 
-    if(isMenuOpen) {
-        hamburger.classList.add('hidden');
-        close.classList.remove('hidden');
-        sidebar.classList.remove('hidden');
-    }else {
-        hamburger.classList.remove('hidden')
-        close.classList.add('hidden')
-        sidebar.classList.add('hidden');
-    }
-}
+const openSideBar = () => {
+  isMenuOpen = !isMenuOpen;
+
+  if (isMenuOpen) {
+    // close.classList.remove('hidden');
+    hamburger.style.display = 'none';
+    closeBtn.style.display = 'block';
+    sidebar.style.display = 'flex';
+  } else {
+    // hamburger.classList.remove('hidden');
+    hamburger.style.display = 'block';
+    closeBtn.style.display = 'none';
+    sidebar.style.display = 'none';
+  }
+};
