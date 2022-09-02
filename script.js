@@ -116,3 +116,25 @@ const changeNav = () => {
 };
 
 changeNav();
+
+
+const hamburger = document.querySelector('.hamburger img');
+const close = document.querySelector('.hamburger p');
+const sidebar = document.querySelector('.sidebar');
+
+
+
+let isMenuOpen = false;
+const openSideBar = () => {
+    isMenuOpen = !isMenuOpen;
+
+    if(isMenuOpen) {
+        hamburger.classList.add('hidden');
+        close.classList.remove('hidden');
+        sidebar.classList.remove('hidden');
+    }else {
+        hamburger.classList.remove('hidden')
+        close.classList.add('hidden')
+        sidebar.classList.add('hidden');
+    }
+}

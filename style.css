@@ -42,7 +42,7 @@ header {
     align-items: center;
 }
 
-nav {
+.nav {
     display: none;
 }
 
@@ -102,7 +102,25 @@ nav {
 .bottom {
     border: 0.5px solid #3c3b3d;
 }
+.hidden{
+    display: none;
+}
+.hamburger{
+    position: relative;
+}
 
+.hamburger img{
+    /* display: none; */
+    transition: 0.5s ease-in-out;
+    transform: rotate(180deg);
+    cursor: pointer;
+   
+}
+.hamburger p{
+    display: none;
+    color: white;
+    font-size: 30px;
+}
 #toggle {
     margin-left: 30px;
     position: relative;
@@ -149,8 +167,8 @@ nav {
 }
 
 .earth {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
 }
 
 .earth>img {
@@ -235,7 +253,7 @@ nav {
 }
 
 .section2 {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -245,7 +263,7 @@ nav {
 .props {
     width: 20%;
     border: 1px solid rgb(221, 218, 218);
-    padding: 20px;
+    padding: 15px;
     color: white;
 }
 
@@ -260,6 +278,133 @@ nav {
 }
 
 .props h3 {
-    font-size: 36px;
+    font-size: 24px;
     font-family: 'Bebas Neue', cursive;
+}
+@media screen and (max-width: 1024px) {
+    .list {
+        margin-right: 15px;
+    }
+    .list a {
+        font-size: 12px;
+    }
+    .section1 {
+        width: 90%;
+    }
+    .section1-text {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .section2{
+        width: 95%;
+    }
+    .props p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .logo h2 {
+        margin-bottom: 15px;
+    }
+    header{
+        flex-direction: column;
+    }
+    .list a {
+        font-size: 10px;
+    }
+    #toggle{
+        margin-left: 10px;
+    }
+    .section1{
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+    }
+    .section1-text {
+        margin-top: 30px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;       
+    }
+    .section1-text h2 {
+        font-size: 36px;
+    }
+    .section1-text p {
+        color: #fff;
+        font-family: 'Varela Round', sans-serif;
+        font-size: 10px;
+    }
+    .buttons button{
+        font-size: 8px;
+        padding: 8px 15px;
+    }
+    .overview{
+        width: 50%;
+    }
+    .props{
+        padding: 10px;
+    }
+    .props p {
+        font-size: 8px;
+    }
+    .props h3 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 512px) {
+    .logo h2{
+        margin-bottom: 0;
+    }
+    header{
+        flex-direction: row;
+        align-items: center;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger p{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    .sidebar{
+        position: absolute;
+        background-color: white;
+        color:#080625;
+       
+    }
+    .list-side{
+        color:#080625;
+    }
+    .section1-text {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;       
+    }
+    .buttons{
+        display: none;
+    }
+    .overview{
+        text-align: center;
+        width: 100%;
+    }
+    .section2{
+        flex-direction: column;
+    }
+    .props{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .earth {
+        width: 200px;
+        height: 200px;
+    }
+    
 }

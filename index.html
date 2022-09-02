@@ -17,7 +17,7 @@
                     <h2>THE PLANETS</h2>
                 </div>
                 <div class="navbar">
-                    <nav>
+                    <nav class="nav">
                         <ul class="lists">
                             <li class="list"><a href="./mecury.html">MECURY</a></li>
                             <li class="list"><a href="./venus.html">VENUS</a></li>
@@ -37,20 +37,46 @@
                         <i class="indicator"></i>
                     </div>
                 </div>
-
+                <div class="hamburger" onclick="openSideBar()">
+                    <img src="./images/icon-menu.svg" alt='menu' />
+                    <p>x</p>
+                  </div>
             </header>
+                <div class="sidebar hidden">
+                    <nav class="side-nav">
+                        <ul class="sidenav-ul">
+                            <li class="list-side"><a href="./mecury.html">MECURY</a></li>
+                            <li class="list-side"><a href="./venus.html">VENUS</a></li>
+                            <li class="list-side"><a href="./index.html">EARTH</a></li>
+                            <li class="list-side"><a href="./mars.html">MARS</a></li>
+                            <li class="list-side"><a href="./jupiter.html">JUPITER</a></li>
+                            <li class="list-side"><a href="./saturn.html">SATURN</a></li>
+                            <li class="list-side"><a href="./uranus.html">URANUS</a></li>
+                            <li class="list-side"><a href="./neptune.html">NEPTUNE</a></li>
+                        </ul>
+                    </nav>
+                    <div class="auth">
+                        <button class="signup"> <a href="./signup.html">Sign Up</a></button>
+                        <button class="login"> <a href="./login.html">Log In</a></button>
+                    </div>
+                    <div id="toggle" onclick="toggle()">
+                        <i class="indicator"></i>
+                    </div>
+                </div>
             <div class="bottom"></div>
             <div class="section1">
                 <div class="earth">
                     <img src="./images/earth.svg" alt="earth">
                 </div>
                 <div class="section1-text">
-                    <h2>EARTH</h2>
-                    <p>Third planet from the sun and the only known planet to harbor life.About 29.2% of Earth's surface
-                        is land with remaining 70.8% is covered with water. Earth's distance from the sun, physical
-                        properties and geological history have allowed life to evolve and thrive.</p>
-                    <p class="wikipedia"><span class="source">Source: </span> Wikipedia <span class="arrow">→</span>
-                    </p>
+                    <div class="overview">
+                        <h2>EARTH</h2>
+                        <p>Third planet from the sun and the only known planet to harbor life.About 29.2% of Earth's surface
+                            is land with remaining 70.8% is covered with water. Earth's distance from the sun, physical
+                            properties and geological history have allowed life to evolve and thrive.</p>
+                        <p class="wikipedia"><span class="source">Source: </span> Wikipedia <span class="arrow">→</span>
+                        </p>
+                    </div>
                     <div class="buttons">
                         <button><span>01</span> OVERVIEW</button>
                         <button><span>02</span> INTERNAL STRUCTURE</button>
