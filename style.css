@@ -12,15 +12,18 @@
     min-height: 100vh;
     background-color: #080625;
 }
-.container.active{
+
+.container.active {
     background-color: white;
 }
+
 .logo h2 {
     color: #fff;
     font-family: 'Bebas Neue', cursive;
     font-size: 24px;
 }
-.logo h2.active{
+
+.logo h2.active {
     color: black;
 }
 
@@ -38,9 +41,11 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-nav{
+
+nav {
     display: none;
 }
+
 .lists {
 
     list-style: none;
@@ -59,7 +64,8 @@ nav{
     font-family: 'Varela Round', sans-serif;
     font-size: 14px;
 }
-.list a.active{
+
+.list a.active {
     color: #080625;
 }
 
@@ -96,7 +102,8 @@ nav{
 .bottom {
     border: 0.5px solid #3c3b3d;
 }
- #toggle{
+
+#toggle {
     margin-left: 30px;
     position: relative;
     display: block;
@@ -106,17 +113,19 @@ nav{
     background-color: #222;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
-                inset 0 8px 8px rgba(0,0,0,0.1),
-                inset 0 -4px 4px rgba(0,0,0,0.1);
- }
- #toggle.active{
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+        inset 0 8px 8px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggle.active {
     background: white;
-    box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
-                inset 0 2px 8px rgba(0,0,0,0.1),
-                inset 0 -4px 8px rgba(0,0,0,0.05);
- }
- #toggle .indicator{
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+        inset 0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicator {
     position: absolute;
     top: 0;
     left: 0;
@@ -125,18 +134,19 @@ nav{
     background: linear-gradient(to bottom, #444, #222);
     border-radius: 50%;
     transform: scale(0.9);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.5),
-                inset  0 4px 4px rgba(255,255,255,0.2),
-                inset 0 -4px 4px rgba(255,255,255,0.2);
-    transform: 0.5s;            
- }
-  #toggle.active .indicator{
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+        inset 0 4px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transform: 0.5s;
+}
+
+#toggle.active .indicator {
     left: 20px;
     background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.5),
-                inset  0 4px 4px rgba(255,255,255,0.2),
-                inset 0 -4px 4px rgba(255,255,255,0.2);
- }
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+        inset 0 4px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+}
 
 .earth {
     width: 400px;
@@ -168,9 +178,13 @@ nav{
     font-size: 48px;
     margin-bottom: 15px;
 }
-.section1-text h2.active,.section1-text p.active, .wikipedia.active{
+
+.section1-text h2.active,
+.section1-text p.active,
+.wikipedia.active {
     color: #080625;
 }
+
 .section1-text p {
     color: #fff;
     font-family: 'Varela Round', sans-serif;
@@ -234,9 +248,11 @@ nav{
     padding: 20px;
     color: white;
 }
-.props.active{
+
+.props.active {
     color: #080625;
 }
+
 .props p {
     font-size: 14px;
     margin-bottom: 10px;
