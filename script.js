@@ -1,33 +1,31 @@
-// const user = document.querySelector('.name');
-// const email = document.querySelector('.email');
-// const password = document.querySelector('.password');
-// const form = document.querySelector('.form');
-// const input = document.querySelector('.')
+
 
 // LIGHT AND DARK MODE
-// const container = document.querySelector('.container');
-// const logo = document.querySelector('.logo h2');
-// const listA = document.querySelector('.list a');
-// const section1h2 = document.querySelector('.section1-text h2');
-// const section1p = document.querySelector('.section1-text p');
-// const wikipedia = document.querySelector('.wikipedia');
-// const props = document.querySelectorAll('.props');
-// const toggle = document.getElementById('toggle');
-// const indicator = document.getElementsByClassName('indicator');
-// toggle.addEventListener('click', function () {
-//   toggle.classList.toggle('active');
-//   container.classList.toggle('active');
-//   logo.classList.toggle('active');
-//   listA.classList.toggle('active');
-//   section1h2.classList.toggle('active');
-//   section1p.classList.toggle('active');
-//   wikipedia.classList.toggle('active');
-//   for (let i = 0; i < props.length; i++) {
-//     props[i].classList.toggle('active');
-//   }
-// });
+const container = document.querySelector('.container');
+const logo = document.querySelector('.logo h2');
+const listA = document.querySelector('.list a');
+const section1h2 = document.querySelector('.section1-text h2');
+const section1p = document.querySelector('.section1-text p');
+const wikipedia = document.querySelector('.wikipedia');
+const props = document.querySelectorAll('.props');
+const toggle = document.getElementById('toggle');
+const indicator = document.getElementsByClassName('indicator');
+
+toggle.addEventListener('click', function () {
+  toggle.classList.toggle('active');
+  container.classList.toggle('active');
+  logo.classList.toggle('active');
+  listA.classList.toggle('active');
+  section1h2.classList.toggle('active');
+  section1p.classList.toggle('active');
+  wikipedia.classList.toggle('active');
+  for (let i = 0; i < props.length; i++) {
+    props[i].classList.toggle('active');
+  }
+});
 
 const form = document.querySelector('.form');
+const loginForm = document.querySelector('.login');
 
 let user = {};
 
@@ -51,7 +49,7 @@ form.addEventListener('submit', (event) => {
       (item) => item.email === user.email
     );
     if (isExisting) {
-      alert(`User ${user.email} already exists)`);
+      alert(`User ${user.email} already exists`);
     } else {
       registeredUsers.push(user);
       localStorage.setItem('users', JSON.stringify(registeredUsers));
@@ -89,64 +87,43 @@ function showSuccess(input) {
   errorMsg.style.display = 'none';
 }
 
-// function checkEmail(input) {
-//     const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-//   if(re.test(input.value.trim())) {
-//     showSuccess(input)
-//   } else {
-//     showError(input, 'Email is not valid')
-//   }
-// }
 
-// function checkRequired(inputArr) {
-//     inputArr.forEach(function (input) {
-//         // console.log(input.value)
-//         if (input.value.trim() === '') {
-//             // console.log('@GOT HR')
-//             showError(input, `${getFieldName(input)} is Required`)
-//         }else{
-//             showSuccess(input)
 
-//         }
-//     });
-// }
-// function checkLength(input, min , max) {
-//     if(input.valuelength < min) {
-//         showError(input, `${getFieldName(input)} must be at least ${min} characters `)
-//     } else if (input.value.length > max){
-//         showError(input, `${getFieldName(input)} must be less than ${max} character`)
-//     } else {
-//         // showSuccess(input);
-//     }
-// }
 
-// function checkPasswordsMatch(input1, input2) {
-//     if(input1.value!==input2.value){
-//         showError(input2, 'passwords do not match')
-//     } else {
-//         // showSuccess(input2);
-//     }
-// }
 
-// function getFieldName(input){
-//     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-// }
+// const loginForm = document.querySelector('.login');
+const nav = document.querySelector('nav');
+const auth = document.querySelector('.auth');
 
-// form.addEventListener('submit', function(e){
-//     e.preventDefault();
-//     checkEmail(email)
-//     checkRequired([user, email, password, confirmPassword]);
-//     checkLength(user, 3 , 15);
-//     checkLength(password, 6 , 25);
-//     checkPasswordsMatch(password, confirmPassword)
-// })
+console.log(nav)
+console.log(auth)
 
-// 1. Get all values together
-// 2. Check if all values are filled (form validation)
-// 3. Submit form to localStorage
+// const user = {};
 
-// const user = {
-//   name: 'mayowa',
-//   email: 'brjkrh',
-//   password: 'rhrjeher',
-// };
+// const handleChange = (event) => {
+//     const { name, value } = event.target;
+//     user[name] = value;
+//     console.log(user);
+//   };
+
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const registeredUsers = JSON.parse(localStorage.getItem('users'));
+    console.log(registeredUsers)
+    const isExisting = registeredUsers.find(
+        (item) => item.email === user.email
+      );
+      if (!isExisting) {
+        alert(`User ${user.email} doesnt exists`);
+        return
+      }
+      if(isExisting.password !==  user.password){
+        alert('wrong password') 
+        return
+      }
+      auth.classList.style.display = 'none';
+      nav.classList.style.display = 'block';
+
+      window.location.href = '/index.html'
+})
+
